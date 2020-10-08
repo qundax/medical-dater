@@ -29,7 +29,7 @@ SECRET_KEY = '(t7h!zddgo2=e3l^udl(ibjrfol5rvvo-!#5=yh10gi*82$wqz'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://medical-dater.herokuapp.com/',
+    'medical-dater.herokuapp.com',
     'localhost',
     ]
 
