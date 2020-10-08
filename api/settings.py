@@ -11,10 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import os
-
-cwd = os.getcwd()
-if cwd == '/app' or cwd[:4] == '/tmp':
-    import dj_database_url
+import dj_database_url
 
 from pathlib import Path
 
@@ -49,7 +46,6 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'corsheaders',
-    'whitenoise',
 
     'medical_devices.apps.MedicalDevicesConfig'
 ]
@@ -108,7 +104,7 @@ DATABASES = {
     #     'NAME': 'medical_dater',
     #     'HOST': 'localhost',
     # }
-    'default': dj_database_url.config(default=os.getenv(DATABASE_URL))
+    'default': dj_database_url.config(conn_max_age=600)
 }
 
 
