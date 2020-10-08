@@ -27,7 +27,10 @@ SECRET_KEY = '(t7h!zddgo2=e3l^udl(ibjrfol5rvvo-!#5=yh10gi*82$wqz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://medical-dater.herokuapp.com/']
+ALLOWED_HOSTS = [
+    'https://medical-dater.herokuapp.com/',
+    'localhost',
+    ]
 
 
 # Application definition
@@ -42,6 +45,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'corsheaders',
+    'whitenoise',
 
     'medical_devices.apps.MedicalDevicesConfig'
 ]
@@ -141,4 +145,4 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipmanifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
