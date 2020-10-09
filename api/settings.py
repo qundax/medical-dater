@@ -99,12 +99,12 @@ CORS_ORIGIN_WHITELIST = [
 
 DATABASES = {
     # for local development
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'medical_dater',
-        'HOST': 'localhost',
-    }
-    # 'default': dj_database_url.config(conn_max_age=600)
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'medical_dater',
+    #     'HOST': 'localhost',
+    # }
+    'default': dj_database_url.config(conn_max_age=600)
 }
 
 
