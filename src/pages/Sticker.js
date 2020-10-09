@@ -8,7 +8,7 @@ function Sticker(props) {
 
   const svgIcon = (
     <Icon>
-      <img alt="print" src="/printer.svg" />
+      <img alt="print" src="static/printer.svg" />
     </Icon>
   );
 
